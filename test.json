@@ -1,0 +1,10 @@
+{
+    "steps": [
+        {
+            "Hold_and_press": {
+                "button_to_hold": "cmd",
+                "button_to_press": "space"
+            }
+        }
+    ]
+}
