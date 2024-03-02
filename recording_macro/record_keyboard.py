@@ -18,7 +18,7 @@ class RecordKeyboard:
         self.controller = controller
         self.key_to_hold = None
 
-    def keyboard_listener(self, select_method):
+    def keyboard_listener(self, select_method: str):
         """
         Starts listening for keyboard events based on the selected method.
 
@@ -76,7 +76,7 @@ class RecordKeyboard:
             print(f"""button_to_hold:" {self.key_to_hold}\n"button_to_press: {key}""")
             return False
 
-    def _type(self, text):
+    def _type(self, text: str):
         """
         Records typing of text and saves the step.
 
