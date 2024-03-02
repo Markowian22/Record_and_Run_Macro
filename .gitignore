@@ -2,16 +2,14 @@
 /.DS_Store
 /.venv
 /Program wstępny - dziala
-/__pycache__
 /kosz
-/.__pycache__
 helper.py
+**/__pycache__/
 
 Program wstępny - dziala
 kosz
 # Byte-compiled / optimized / DLL files
-__pycache__/
-.__pycache__/
+
 *.py[cod]
 *$py.class
 
