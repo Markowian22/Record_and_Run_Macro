@@ -45,7 +45,7 @@ class RecordKeyboard:
         :param key: The key that was pressed.
         :type key: pynput.keyboard.Key or pynput.keyboard.KeyCode
         """
-        self.controller.steps["steps"].append({"click_button": {"button": f"{key}"}})
+        self.controller.steps["steps"].append({"Click_button": {"button": f"{key}"}})
         if self.controller.mouse_listener is not None:
             self.controller.mouse_listener.stop()
         self.controller.save_steps()

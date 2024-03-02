@@ -1,6 +1,6 @@
 import json
 
-from pynput.keyboard import Key
+from pynput.keyboard import Key, KeyCode
 
 
 class Process:
@@ -35,11 +35,16 @@ class Process:
         options = {
             "Type": self.controller.keyboard.type,
             "Click_button": lambda button: self.controller.keyboard.click_button(
-                getattr(Key, button)
+                KeyCode.from_char(button) if len(button) == 1 else getattr(Key, button)
             ),
             "Hold_and_press": lambda button_to_hold,
             button_to_press: self.controller.keyboard.hold_and_press(
-                getattr(Key, button_to_hold), getattr(Key, button_to_press)
+                KeyCode.from_char(button_to_hold)
+                if len(button_to_hold) == 1
+                else getattr(Key, button_to_hold),
+                KeyCode.from_char(button_to_press)
+                if len(button_to_press) == 1
+                else getattr(Key, button_to_press),
             ),
             "Click_at_position": self.controller.mouse.click_at_position,
             "Double_click_at_position": self.controller.mouse.double_click_at_position,
