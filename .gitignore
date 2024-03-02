@@ -15,7 +15,7 @@ kosz
 
 # C extensions
 *.so
-
+.pylintrc
 # Distribution / packaging
 .Python
 build/

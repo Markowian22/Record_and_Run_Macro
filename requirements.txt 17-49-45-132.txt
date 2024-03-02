@@ -1,0 +1,2 @@
+pynput==1.7.6
+decorator==5.1.1
