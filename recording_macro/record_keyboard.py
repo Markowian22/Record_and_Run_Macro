@@ -1,5 +1,6 @@
-from decorator import special_key_decorator
 from pynput import keyboard
+
+from decorator import special_key_decorator
 
 
 class RecordKeyboard:
@@ -44,6 +45,7 @@ class RecordKeyboard:
             if self.controller.mouse_listener is not None:
                 self.controller.mouse_listener.stop()
             self.controller.save_steps()
+            print(f"""button_to_hold:" {self.key_to_hold}\n"button_to_press: {key}""")
             return False
 
     def _type(self, text):

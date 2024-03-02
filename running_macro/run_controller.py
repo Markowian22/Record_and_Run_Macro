@@ -1,8 +1,9 @@
 from time import sleep
 
-from decorator import delay
 from pynput import keyboard, mouse
 from pynput.mouse import Button
+
+from decorator import delay
 
 
 class RunController:
@@ -42,6 +43,14 @@ class RunController:
             self.mouse.position = (coordinate_x, coordinate_y)
             sleep(0.5)
             self.mouse.click(button, 1)
+
+        @delay(1)
+        def double_click_at_position(
+            self, coordinate_x, coordinate_y, button=Button.left
+        ):
+            self.mouse.position = (coordinate_x, coordinate_y)
+            sleep(1)
+            self.mouse.click(button, 2)
 
         @delay(1)
         def press_mouse_button(self, button=Button.left):

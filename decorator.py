@@ -18,7 +18,7 @@ def delay(seconds):
 def special_key_decorator(func):
     @wraps(func)
     def wrapper(self, key):
-        print(func.__name__)
+        # print(func.__name__)
         if hasattr(key, "name"):
             key = getattr(key, "name")
         else:

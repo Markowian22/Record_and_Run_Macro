@@ -24,6 +24,8 @@ class Process:
                 getattr(Key, button_to_hold), getattr(Key, button_to_press)
             ),
             "Click_at_position": self.controller.mouse.click_at_position,
+            "Double_click_at_position": self.controller.mouse.double_click_at_position,
+            "Move_to_position": self.controller.mouse.move_to_position,
         }
 
         for step in self.steps:
