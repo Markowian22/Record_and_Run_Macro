@@ -5,6 +5,24 @@
                 "coordinate_x": 1240.5703125,
                 "coordinate_y": 543.2421875
             }
+        },
+        {
+            "Move_to_position": {
+                "coordinate_x": 993.453125,
+                "coordinate_y": 535.5703125
+            }
+        },
+        {
+            "Click_at_position": {
+                "coordinate_x": 1178.1875,
+                "coordinate_y": 516.13671875
+            }
+        },
+        {
+            "Click_at_position": {
+                "coordinate_x": 1125.8359375,
+                "coordinate_y": 732.94921875
+            }
         }
     ]
 }
